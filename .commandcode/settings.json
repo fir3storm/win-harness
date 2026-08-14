@@ -17,7 +17,8 @@
       "Shell(git commit -F - <<'EOF' Build memory-enhanced self-learning tool harness for Windows Add win-harness: a tool harness with SQLite-backed memory, LRU caching, and self-learning recommendations for Windows security operations. - core/base.py: Tool abstractions (Tool, ToolSpec, ExecutionResult) - core/memory.py: SQLite persistence + hashing embeddings + LRU cache - core/registry.py: Tool discovery with fuzzy search - core/executor.py: Async execution engine with caching - core/learner.py: Recommendation engine + plan optimization - core/harness.py: Main orchestrator with plan_and_execute - tools/executor.py: Windows/PowerShell/WSL subprocess bridge - tools/windows_tools.py: 5 built-in tools (PS, system, network, WSL, creds) - cli.py: CLI with list/run/plan/recommend/stats - tests: 13 unit tests covering memory, registry, executor, learner Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)",
       "Shell(rm COMMIT_MSG.txt 2>&1; git remote -v 2>&1; git log --oneline -1 2>&1)",
       "Shell(del /f /q COMMIT_MSG.txt 2>nul; git remote -v 2>&1; echo \"---\"; git log --oneline -1 2>&1)",
-      "Shell(git remote remove origin 2>nul & gh repo create win-harness --public --description \"Memory-enhanced, self-learning tool harness for Windows security operations. Created by Abhirup Guha, Info Security Solution.\" 2>&1)"
+      "Shell(git remote remove origin 2>nul & gh repo create win-harness --public --description \"Memory-enhanced, self-learning tool harness for Windows security operations. Created by Abhirup Guha, Info Security Solution.\" 2>&1)",
+      "Shell(git add -A 2>&1; git commit -F - <<'EOF' Fix author email to match actual account Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)"
     ],
     "deny": [],
     "defaultMode": "default"

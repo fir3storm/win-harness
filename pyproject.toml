@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
-    { name = "Abhirup Guha", email = "abhirup@infosec-solution.io" }
+    { name = "Abhirup Guha", email = "abhirupguhakolkata@gmail.com" }
 ]
 keywords = ["security", "windows", "wsl", "kali", "tool-harness", "mcp", "agent"]
 classifiers = [
