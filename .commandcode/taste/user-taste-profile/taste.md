@@ -6,3 +6,6 @@
 - Primary OS: Windows (paths use backslashes, `D:\My Softwares\...` style paths with spaces). Confidence: 0.9
 - Has WSL available with Kali Linux distribution for Linux/Security tooling. Confidence: 0.85
 - Prefers graceful degradation: tools should handle missing components (e.g., no WSL installed) with clear error messages rather than crashing. Confidence: 0.8
+- Issues terse, all-caps directives for commands (e.g., "PUSH TO GIT") — expects the agent to interpret and execute the full workflow without asking for clarification mid-task. Confidence: 0.85
+- Expects the assistant to autonomously handle end-to-end workflows (e.g., git init → .gitignore → add → commit → push) without pausing to ask questions unless truly blocked (e.g., missing credentials). Confidence: 0.85
+- Shell environment is Windows cmd/PowerShell, not bash — heredocs and Unix idioms won't work; use temp files or PowerShell equivalents instead. Confidence: 0.9
