@@ -97,6 +97,40 @@ print(h.get_memory_summary())
 
 ---
 
+## 🎯 Usage Scenarios
+
+### 1. Incident Response — Triage Suspicious Activity
+
+When an AI SOC agent detects anomalous behaviour (e.g., a suspicious process in EDR alerts), it can immediately triage the affected host:
+
+```bash
+win-harness plan "Check running processes and network connections for suspicious activity"
+```
+
+**What happens:** The harness recommends `ps_command` (high confidence from past success), auto-infers `Get-Process | Sort-Object WS -Descending | Select-Object -First 10` and `Get-NetTCPConnection | Where-Object {$_.State -eq 'Listen'}`, executes both, and caches results. On repeat queries within 5 minutes, responses are served from LRU cache (0ms).
+
+### 2. Privilege Escalation Assessment
+
+An AI agent assessing a compromised endpoint can enumerate credential stores and privilege paths:
+
+```bash
+win-harness plan "Check for privilege escalation vectors on this Windows machine"
+```
+
+**What happens:** The harness recommends `win_credentials` (auto-infers Wi-Fi + Credential Manager scan) and `system_info` (full detail level). It runs `netsh wlan show profile` to extract saved Wi-Fi passwords, `cmdkey /list` for stored credentials, and `Get-CimInstance Win32_ComputerSystem` for logged-in users — all via built-in tools, no external dependencies.
+
+### 3. Network Reconnaissance via WSL/Kali
+
+When an AI agent needs Linux security tools (nmap, sqlmap, etc.) but is running on Windows:
+
+```bash
+win-harness plan "Scan 192.168.1.0/24 for open ports using nmap"
+```
+
+**What happens:** The harness recommends `kali_tool`, auto-infers `{"tool": "nmap", "args": "-sTV 192.168.1.0/24"}` by extracting the target IP from the task description, and executes `wsl -d kali-linux -e nmap -sT -sV 192.168.1.0/24`. If WSL/Kali isn't installed, it fails fast with a clear error and the learner lowers that tool's confidence for similar future tasks.
+
+---
+
 ## 🤖 AI Agent Integration
 
 ### CommandCode (Slash Commands)
