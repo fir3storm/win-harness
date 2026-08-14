@@ -19,7 +19,8 @@
       "Shell(del /f /q COMMIT_MSG.txt 2>nul; git remote -v 2>&1; echo \"---\"; git log --oneline -1 2>&1)",
       "Shell(git remote remove origin 2>nul & gh repo create win-harness --public --description \"Memory-enhanced, self-learning tool harness for Windows security operations. Created by Abhirup Guha, Info Security Solution.\" 2>&1)",
       "Shell(git add -A 2>&1; git commit -F - <<'EOF' Fix author email to match actual account Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)",
-      "Shell(git add -A && git commit -F - <<'EOF' Add global installation scripts and AI generator integrations - install.sh / install.bat: one-command global install - CommandCode mod file + AGENTS.md: /win_harness_plan, /win_harness_run - Codex agent prompts + config: ready-to-use system prompt and YAML config Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)"
+      "Shell(git add -A && git commit -F - <<'EOF' Add global installation scripts and AI generator integrations - install.sh / install.bat: one-command global install - CommandCode mod file + AGENTS.md: /win_harness_plan, /win_harness_run - Codex agent prompts + config: ready-to-use system prompt and YAML config Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)",
+      "Shell(git rm --cached COMMIT_MSG.txt && git commit -m \"Remove temp file\" && del /f /q COMMIT_MSG.txt 2>nul; git push 2>&1)"
     ],
     "deny": [],
     "defaultMode": "default"
