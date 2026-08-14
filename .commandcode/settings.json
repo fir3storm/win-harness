@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(python -m pip install -e . 2>&1)",
+      "Shell(python -m pip install -e \"D:\\My Softwares\\MCp_Test\" 2>&1)",
+      "Shell(python -c \"import os; print(os.path.exists('pyproject.toml'))\" 2>&1)",
+      "Shell(python -c \"import harness; print(harness.__file__)\")",
+      "Shell()",
+      "Shell(dir:*)",
+      "Shell(python -m pytest tests/test_harness.py -v 2>&1)",
+      "Shell(python -m pip install -e . --no-build-isolation --user 2>&1)",
+      "Shell(win-harness:*)",
+      "Shell(python -c \"import harness.tools.windows_tools\" 2>&1)",
+      "Shell(git status 2>&1; echo \"---\"; git remote -v 2>&1; echo \"---\"; git config user.name 2>&1; git config user.email 2>&1)",
+      "Shell(git:*)",
+      "Shell(git config user.name \"CommandCodeBot\"; git config user.email \"noreply@commandcode.ai\"; git add -A 2>&1; git status --short 2>&1)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
