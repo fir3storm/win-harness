@@ -1,0 +1,7 @@
+Add global installation scripts and AI generator integrations
+
+- install.sh / install.bat: one-command global install
+- CommandCode mod file + AGENTS.md: /win_harness_plan, /win_harness_run
+- Codex agent prompts + config: ready-to-use system prompt and YAML config
+
+Co-authored-by: CommandCodeBot <noreply@commandcode.ai>

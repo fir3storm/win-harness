@@ -9,7 +9,7 @@
 - Issues terse, all-caps directives for commands (e.g., "PUSH TO GIT") — expects the agent to interpret and execute the full workflow without asking for clarification mid-task. Confidence: 0.85
 - Expects the assistant to autonomously handle end-to-end workflows (e.g., git init → .gitignore → add → commit → push) without pausing to ask questions unless truly blocked (e.g., missing credentials). Confidence: 0.85
 - Shell environment is Windows cmd/PowerShell, not bash — heredocs and Unix idioms won't work; use temp files or PowerShell equivalents instead. Confidence: 0.9
-- Full name is Abhirup Guha; brand/company is "Info Security Solution"; email is abhirup@infosec-solution.io. Wants all project READMEs and metadata (pyproject.toml, etc.) branded as "Created by Abhirup Guha, Info Security Solution". Confidence: 0.95
+- Full name is Abhirup Guha; brand/company is "Info Security Solution"; email is abhirupguhakolkata@gmail.com. Wants all project READMEs and metadata (pyproject.toml, etc.) branded as "Created by Abhirup Guha, Info Security Solution". Confidence: 0.95
 - GitHub username is `fir3storm`. Confidence: 0.9
 - Prefers public repositories for completed projects. Confidence: 0.8
 - Wants creative/interesting project names rather than generic ones (said "give a cool name"). Confidence: 0.7
